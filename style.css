@@ -109,28 +109,10 @@ section.page-container {
   bottom: 0;
 }
 
-section.community {
-
-}
-
-section.housing {
-
-}
-
-section.jobs {
-
-}
-section.services {
-}
-
 section.col-1 {
   float: left;
   padding: 0;
   width: 33%;
-}
-
-section.for-sale {
-
 }
 
 section.col-2 {
@@ -139,17 +121,12 @@ section.col-2 {
   width: 37%;
 }
 
-section.discussions {
-}
-
-section.gigs {
-}
-
 section.col-3 {
   float: left;
   padding: 0;
   width: 22%;
 }
+
 section h2 {
   text-align: center;
   font-weight: bold;
@@ -175,4 +152,16 @@ a:hover {
 
 a:visited {
 
+}
+
+@media screen and (max-width: 450px) {
+  body {
+    background-color: lightgreen;
+  }
+  section.page-container {
+    width: 400px;
+  }
+  section.col-1, section.col-2, section.col-3 {
+    width: 100%;
+  }
 }
