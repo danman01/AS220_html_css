@@ -35,6 +35,15 @@ section h2.box {
 
 }
 
+div.wrapper {
+  min-height: 100%;
+}
+
+section.page-container {
+  width: 980px;
+  margin: 0 auto;
+}
+
 #left-aside {
 
 }
