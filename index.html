@@ -16,6 +16,51 @@
           <h2>
             <a href="#">craigslist</a>
           </h2>
+          <p>
+            <h3>Guessing game!</h3>
+            <p>Enter a number. If it is correct, you win!</p>
+            <input type="number" id="number" placeholder="ex: 5" />
+            <button type="submit" id="guess">Guess</button>
+
+            <script type="text/javascript">
+              /*
+              Step 1: when the guess button is clicked,
+              - get value of input
+              - and compare to the correct value */
+              const guessButton = document.getElementById('guess')
+              let numberOfGuesses = 0
+              const getNumberValue = function() {
+                // I want to get the value of the input
+                let inputElement = document.getElementById('number')
+                let numberValue = inputElement.value
+                console.log('i ran the getNumberValue function. The value is', numberValue)
+                // let numberValue = document.getElementById('number')
+
+                /*
+                Step 2: if the user guesses correctly,
+                display "you win!"
+                else display "guess again"
+                */
+                const winningNumber = 777
+
+                if (numberValue == winningNumber) {
+                  alert('you win!')
+                } else {
+                  numberOfGuesses+=1
+                  console.log('number of guesses', numberOfGuesses)
+                  alert('guess again...this is guess #: ' + numberOfGuesses)
+                  if (numberOfGuesses > 5) {
+                    alert('you lose...refresh to play again')
+                    // how to end the game?
+                    // document.getElementById('guess').css('display','none')
+                  }
+                }
+              }
+              guessButton.addEventListener('click', getNumberValue)
+
+
+            </script>
+          </p>
           <div>
             <a href="#">create a posting</a>
           </div>
